@@ -8,10 +8,14 @@ import App from './App.vue'
 createApp(App).mount('#app')
 
 ClientMonitor.register({
+  collector: '/browser',
   service: 'test-ui',
   pagePath: 'index.html',
   serviceVersion: 'v1.0.0',
   useWebVitals: true,
+  enableFetch: true,
+  enableXhr: true,
+  traceSDKInternal: true,
 });
 // promise error
 function foo() {

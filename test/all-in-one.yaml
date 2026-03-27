@@ -21,7 +21,7 @@ services:
       - oap
     restart: always
     ports:
-      - 8080:8080
+      - 8081:8080
     environment:
       SW_OAP_ADDRESS: oap:12800
 
@@ -70,7 +70,7 @@ services:
     links:
       - oap
     ports:
-      - 80:80
+      - 8082:80
     environment:
       OAP_SERVER: "oap:12800"
       PROJECT_A: "provider:9091"
